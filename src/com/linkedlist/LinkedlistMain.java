@@ -17,5 +17,7 @@ public class LinkedlistMain {
 		l.addAtPosition(3, 250);
 		l.insertAfter(400, 450);
 		l.print();
+		l.deleteSpecified(450);
+		l.print();
 	}
 }
