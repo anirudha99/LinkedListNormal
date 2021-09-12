@@ -10,9 +10,10 @@ public class LinkedlistMain {
 		l.addFront(400);
 		l.addAtPosition(3,250);
 		l.print();
-		l.deleteAtHead();
-		l.print();
-		l.deleteAtTail();
-		l.print();
+//		l.deleteAtHead();
+//		l.print();
+//		l.deleteAtTail();
+//		l.print();
+		l.search(400);
 	}
 }
