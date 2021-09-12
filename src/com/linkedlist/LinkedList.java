@@ -62,5 +62,4 @@ public class LinkedList {
 		newNode.next = head;
 		head = newNode;
 	}
-
 }
