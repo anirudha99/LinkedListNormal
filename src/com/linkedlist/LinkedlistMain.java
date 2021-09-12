@@ -12,5 +12,7 @@ public class LinkedlistMain {
 		l.print();
 		l.deleteAtHead();
 		l.print();
+		l.deleteAtTail();
+		l.print();
 	}
 }
