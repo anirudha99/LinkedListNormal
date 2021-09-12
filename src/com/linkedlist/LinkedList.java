@@ -154,4 +154,19 @@ public class LinkedList {
 		temp.next = newNode;
 		newNode.next = next;
 	}
+	
+	/**
+	 * @param data
+	 */
+	public void deleteSpecified(int data) {
+
+		Node curNode = head;
+		Node prevNode = null;
+
+		while (curNode != null && curNode.data != data) {
+			prevNode = curNode;
+			curNode = curNode.next;
+		}
+		prevNode.next = curNode.next;
+	}
 }
