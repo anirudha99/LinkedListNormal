@@ -8,6 +8,7 @@ public class LinkedlistMain {
 		l.addFront(200);
 		l.addFront(300);
 		l.addFront(400);
+		l.addAtPosition(3,250);
 		l.print();
 	}
 }
