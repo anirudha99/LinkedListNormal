@@ -104,4 +104,23 @@ public class LinkedList {
 			temp = null;
 		}
 	}
+	
+	/**
+	 * to delete last node from linkedlist
+	 */
+	public void deleteAtTail() {
+		Node temp = head;
+		Node cur = temp;
+		if (head == null) {
+			System.out.println("Deletion not possible");
+			return;
+		} else {
+			while (temp.next != null) {
+				cur = temp;
+				temp = temp.next;
+			}
+			System.out.println("\n" + temp.data + "is deleted");
+			cur.next = null;
+		}
+	}
 }
