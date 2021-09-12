@@ -2,6 +2,7 @@
 .settings
 .project
 ./bin
+.DS_Store
 # Compiled class file
 *.class
 
