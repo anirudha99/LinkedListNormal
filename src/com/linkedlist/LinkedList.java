@@ -50,7 +50,7 @@ public class LinkedList {
 			System.out.print(temp.data + "-->");
 			temp = temp.next;
 		}
-		System.out.print(temp.data + "-->null");
+		System.out.print(temp.data + "-->null\n");
 	}
 
 	/**
@@ -90,5 +90,18 @@ public class LinkedList {
 			prev.next = newNode;
 		}
 
+	}
+	
+	/**
+	 * delete the node from front position
+	 */
+	public void deleteAtHead() {
+		Node temp = head;
+		if (head == null) {
+			System.out.println("No node to delete");
+		} else {
+			head = head.next;
+			temp = null;
+		}
 	}
 }
