@@ -88,6 +88,7 @@ public class LinkedList {
 			}
 			newNode.next = cur;
 			prev.next = newNode;
+			
 		}
 
 	}
