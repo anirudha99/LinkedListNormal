@@ -1,9 +1,10 @@
 package com.linkedlist;
 
 public class LinkedList {
-	private Node head;
 
-	private class Node {
+	public Node head;
+
+	public class Node {
 		int data;
 		Node next;
 
@@ -58,12 +59,13 @@ public class LinkedList {
 	 * 
 	 * @param data
 	 */
-	public void addFront(int data) {
+	public Node addFront(int data) {
 		Node newNode = new Node(data);
 		newNode.next = head;
 		head = newNode;
+		return head;
 	}
-	
+
 	/**
 	 * to insert node at specified position
 	 * 
@@ -88,11 +90,11 @@ public class LinkedList {
 			}
 			newNode.next = cur;
 			prev.next = newNode;
-			
+
 		}
 
 	}
-	
+
 	/**
 	 * delete the node from front position
 	 */
@@ -105,7 +107,7 @@ public class LinkedList {
 			temp = null;
 		}
 	}
-	
+
 	/**
 	 * to delete last node from linkedlist
 	 */
@@ -124,7 +126,7 @@ public class LinkedList {
 			cur.next = null;
 		}
 	}
-	
+
 	/**
 	 * @param key
 	 * @return item
@@ -143,7 +145,7 @@ public class LinkedList {
 		}
 		return null;
 	}
-	
+
 	/**
 	 * @param key
 	 * @param data
@@ -155,7 +157,7 @@ public class LinkedList {
 		temp.next = newNode;
 		newNode.next = next;
 	}
-	
+
 	/**
 	 * @param data
 	 */
@@ -169,5 +171,26 @@ public class LinkedList {
 			curNode = curNode.next;
 		}
 		prevNode.next = curNode.next;
+	}
+
+	/**
+	 * @param data the value node will store
+	 * @return head of the linked list Add the new node at end
+	 */
+	public Node add(final int data) {
+
+		Node newNode = new Node(data);
+		if (head == null) {
+			head = newNode;
+			return head;
+
+		} else {
+			Node temp = head;
+			while (temp.next != null) {
+				temp = temp.next;
+			}
+			temp.next = newNode;
+		}
+		return head;
 	}
 }
